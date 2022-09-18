@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_logo">F</string>
+    <string name="insta_logo">in</string>
+    <string name="app_name">Мій додаток</string>
+    <string name="view_contacts">Переглянути контакти</string>
+    <string name="name">Ім\'я</string>
+    <string name="career">Професія</string>
+    <string name="address">Адреса</string>
+    <string name="edit_profile">Редагувати профіль</string>
+    <string name="user_photo">userPhoto</string>
+    <string name="facebook">facebook_logo</string>
+    <string name="insta">insta_logo</string>
+    <string name="settings">Опції</string>
+    <string name="greetings_message">Давай знайомитись!</string>
+    <string name="login_tip_1">Заповнюй профіль та переходь до заявки</string>
+    <string name="e_mail">Електронна пошта</string>
+    <string name="password">Пароль</string>
+    <string name="check_box_remember_me">Запам\'ятати мене</string>
+    <string name="or">або</string>
+    <string name="register">Реєстрація</string>
+    <string name="register_confirm_that">Натиснувши «Зареєструватися», ви погоджуєтеся з нашими Умовами.</string>
+    <string name="ask_user_about_acc">Вже маєте аккаунт?</string>
+    <string name="google_button">google_button</string>
+    <string name="sign_in">Увійти</string>
+</resources>
