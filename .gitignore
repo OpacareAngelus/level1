@@ -6,7 +6,7 @@ vcs.xml
 workspace.xml
 
 .gradle
-
+.gitattributes
 .DS_Store
 .externalNativeBuild
 .cxx
