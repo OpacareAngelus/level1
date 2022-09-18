@@ -1,7 +1,6 @@
 *.iml
 .gradle
 .gitattributes
-.gitignore
 misc.xml
 modules.xml
 vcs.xml
