@@ -2,10 +2,10 @@
 .gradle
 .gitattributes
 .gitignore
-.misc.xml
-.modules.xml
-.vcs.xml
-.workspace.xml
+*misc.xml
+*modules.xml
+*vcs.xml
+*workspace.xml
 .local.properties
 /local.properties
 /.idea/caches
