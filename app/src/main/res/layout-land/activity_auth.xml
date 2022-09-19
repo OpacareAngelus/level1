@@ -86,7 +86,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids=" btn_registration, text_or, btn_google"
+        app:constraint_referenced_ids=" btn_registration, tv_or, btn_google"
         app:flow_horizontalStyle="spread"
         app:flow_wrapMode="chain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -102,7 +102,7 @@
         tools:targetApi="p" />
 
     <TextView
-        android:id="@+id/text_or"
+        android:id="@+id/tv_or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="53dp"
