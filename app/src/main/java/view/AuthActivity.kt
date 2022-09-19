@@ -10,7 +10,7 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication2.R
-import com.example.myapplication2.util.parsers
+import com.example.myapplication2.util.Parsers
 import com.google.android.material.snackbar.Snackbar
 
 class AuthActivity : AppCompatActivity(), View.OnClickListener {
@@ -69,7 +69,7 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
     private fun checkPass(intent: Intent) {
         if (!allChecks())
             return
-        var userName = parsers().parseMail(emailField.text.toString())
+        var userName = Parsers().parseMail(emailField.text.toString())
         val userData = users.getString(userName, "")?.split("&")?.last()
         if (userData.equals(passField.text.toString())) {
             intent.putExtra("name", userName)
@@ -86,7 +86,7 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
      * Next time user need put "Sigh in" when user use correct e-mail and password. */
     private fun regUser(intent: Intent) {
         if (emailCheck() && passwordCheck()) {
-            var userName = parsers().parseMail(emailField.text.toString())
+            var userName = Parsers().parseMail(emailField.text.toString())
             var ed: SharedPreferences.Editor = users.edit()
             val validTest = users.getString(userName, "")?.split("&")?.first().toString()
             if (validTest == emailField.text.toString()) {
