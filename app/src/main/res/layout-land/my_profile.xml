@@ -112,7 +112,6 @@
         android:textSize="@dimen/text_size_16sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_editProfile"
         app:layout_constraintEnd_toEndOf="parent"
-
         app:layout_constraintStart_toEndOf="@+id/f_linksToAnotherSN"
         app:layout_constraintTop_toBottomOf="@id/f_linksToAnotherSN" />
 
