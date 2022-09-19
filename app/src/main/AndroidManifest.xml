@@ -18,7 +18,7 @@
             android:name=".view.MyProfile"
             android:exported="false" />
         <activity
-            android:name=".view.AuthActivity"
+            android:name="view.AuthActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
