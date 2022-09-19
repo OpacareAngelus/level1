@@ -5,11 +5,11 @@
     android:id="@+id/auth_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.AuthActivity">
+    tools:context="view.AuthActivity">
 
 
     <View
-        android:id="@+id/main_view"
+        android:id="@+id/v_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
@@ -21,14 +21,14 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineCenter"
+        android:id="@+id/gl_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.20" />
+        app:layout_constraintGuide_percent="0.10" />
 
     <TextView
-        android:id="@+id/greating_message"
+        android:id="@+id/tv_greetingMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/greetings_message"
@@ -36,10 +36,10 @@
         android:textSize="@dimen/text_size_24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCenter" />
+        app:layout_constraintTop_toTopOf="@+id/gl_top" />
 
     <TextView
-        android:id="@+id/login_tip_1"
+        android:id="@+id/tv_loginTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8dp"
@@ -48,10 +48,10 @@
         android:textSize="@dimen/text_size_12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greating_message" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_greetingMessage" />
 
     <EditText
-        android:id="@+id/e_mail_edit_text"
+        android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16dp"
@@ -66,10 +66,10 @@
         android:textColorHint="?attr/colorOnSecondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_tip_1" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_loginTip" />
 
     <EditText
-        android:id="@+id/password_edit_text"
+        android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16dp"
@@ -84,10 +84,10 @@
         android:textColorHint="?attr/colorOnSecondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/e_mail_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <CheckBox
-        android:id="@+id/rememberBtn"
+        android:id="@+id/btn_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16dp"
@@ -95,33 +95,34 @@
         android:text="@string/check_box_remember_me"
         android:textColor="?attr/colorOnSecondary"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <com.google.android.gms.common.SignInButton
-        android:id="@+id/google_button"
+        android:id="@+id/btn_google"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/margin_100dp"
         android:layout_marginEnd="@dimen/margin_16dp"
+        app:layout_constraintBottom_toTopOf="@id/tw_or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password_edit_text"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tw_or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/or"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_24sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_registration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/google_button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_google" />
 
     <Button
-        android:id="@+id/reg_button"
+        android:id="@+id/btn_registration"
         android:layout_width="match_parent"
         android:layout_height="@dimen/minHeight"
         android:layout_marginStart="@dimen/margin_16dp"
@@ -132,15 +133,16 @@
         android:text="@string/register"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_18sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_regCongfirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/tw_or"
         app:strokeColor="?attr/colorSecondary"
         app:strokeWidth="@dimen/width_3dp"
         tools:targetApi="p" />
 
     <TextView
-        android:id="@+id/text_view_reg_confirm"
+        android:id="@+id/tv_regCongfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8dp"
@@ -148,24 +150,25 @@
         android:textAlignment="center"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_16sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_signIn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/reg_button" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_registration" />
 
     <TextView
-        android:id="@+id/text_view_did_have_acc"
+        android:id="@+id/tv_didHaveAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_48dp"
         android:text="@string/ask_user_about_acc"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_signIn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/sign_in_button" />
+        app:layout_constraintTop_toTopOf="@+id/btn_signIn" />
 
     <Button
-        android:id="@+id/sign_in_button"
+        android:id="@+id/btn_signIn"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/minHeight"
         android:layout_marginTop="@dimen/margin_8dp"
@@ -175,9 +178,10 @@
         android:text="@string/sign_in"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_16sp"
-        app:layout_constraintEnd_toEndOf="@id/main_view"
-        app:layout_constraintStart_toEndOf="@+id/text_view_did_have_acc"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_reg_confirm"
+        app:layout_constraintBottom_toBottomOf="@+id/v_main"
+        app:layout_constraintEnd_toEndOf="@id/v_main"
+        app:layout_constraintStart_toEndOf="@+id/tv_didHaveAcc"
+        app:layout_constraintTop_toBottomOf="@+id/tv_regCongfirm"
         tools:targetApi="p" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
