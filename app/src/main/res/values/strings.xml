@@ -15,7 +15,7 @@
     <string name="greetings_message">Let\'s get acquainted!</string>
     <string name="login_tip_1">Fill out the profile and go to the application!</string>
     <string name="e_mail">E-mail</string>
-    <string name="password">Passw</string>
+    <string name="password">Password</string>
     <string name="check_box_remember_me">Remember me</string>
     <string name="or">or</string>
     <string name="register">REGISTER</string>
