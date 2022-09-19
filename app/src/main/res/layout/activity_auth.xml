@@ -133,7 +133,7 @@
         android:text="@string/register"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_18sp"
-        app:layout_constraintBottom_toTopOf="@id/tv_regCongfirm"
+        app:layout_constraintBottom_toTopOf="@id/tv_regConfirm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tw_or"
@@ -142,7 +142,7 @@
         tools:targetApi="p" />
 
     <TextView
-        android:id="@+id/tv_regCongfirm"
+        android:id="@+id/tv_regConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8dp"
@@ -181,7 +181,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/v_main"
         app:layout_constraintEnd_toEndOf="@id/v_main"
         app:layout_constraintStart_toEndOf="@+id/tv_didHaveAcc"
-        app:layout_constraintTop_toBottomOf="@+id/tv_regCongfirm"
+        app:layout_constraintTop_toBottomOf="@+id/tv_regConfirm"
         tools:targetApi="p" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
