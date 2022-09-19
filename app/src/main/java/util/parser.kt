@@ -6,7 +6,7 @@ class Parsers {
 
     /**This parser take mail and convert it to the first name and second name.*/
     fun parseMail(mail: String): String {
-        var (firstName, secondName) = mail.split("@").first().split(".")
+        val (firstName, secondName) = mail.split("@").first().split(".")
         return "${firstName.capitalize()} ${secondName.capitalize()}"
     }
 }
