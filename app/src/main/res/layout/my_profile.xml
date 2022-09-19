@@ -9,52 +9,52 @@
     tools:context=".view.MyProfile">
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guidelineCenter"
+        android:id="@+id/gl_guidelineCenter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.50" />
 
     <View
-        android:id="@+id/topWindow"
+        android:id="@+id/v_topWindow"
         android:layout_width="match_parent"
         android:layout_height="@dimen/null_dp"
         android:background="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/guidelineCenter"
+        app:layout_constraintBottom_toTopOf="@id/gl_guidelineCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/buttonSettings"
+        android:id="@+id/btn_Settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_48dp"
+        android:layout_marginTop="@dimen/margin_32dp"
         android:text="@string/settings"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_24sp"
-        app:layout_constraintStart_toStartOf="@+id/topWindow"
-        app:layout_constraintTop_toTopOf="@+id/topWindow" />
+        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
+        app:layout_constraintTop_toTopOf="@+id/v_topWindow" />
 
     <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/flow"
+        android:id="@+id/f_userData"
         android:layout_width="@dimen/null_dp"
         android:layout_height="@dimen/null_dp"
         android:orientation="vertical"
-        app:constraint_referenced_ids="userPhoto, name, career, homeAddress"
+        app:constraint_referenced_ids="iv_userPhoto, tv_name, tv_career, tv_userAddress"
         app:flow_verticalStyle="packed"
         app:flow_wrapMode="chain"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineCenter"
-        app:layout_constraintEnd_toEndOf="@+id/topWindow"
+        app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
+        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/topWindow"
-        app:layout_constraintTop_toTopOf="@+id/topWindow"
+        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
+        app:layout_constraintTop_toTopOf="@+id/v_topWindow"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/userPhoto"
+        android:id="@+id/iv_userPhoto"
         android:layout_width="@dimen/user_photo_size"
         android:layout_height="@dimen/user_photo_size"
         android:backgroundTint="@drawable/btn_rect"
@@ -62,47 +62,47 @@
         android:foreground="@drawable/img_shaper"
         android:scaleType="centerCrop"
         android:src="@drawable/user_photo"
-        app:layout_constraintEnd_toEndOf="@+id/topWindow"
-        app:layout_constraintStart_toStartOf="@+id/topWindow"
-        app:layout_constraintTop_toTopOf="@id/topWindow" />
+        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
+        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
+        app:layout_constraintTop_toTopOf="@id/v_topWindow" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_18sp"
-        app:layout_constraintEnd_toEndOf="@+id/topWindow"
-        app:layout_constraintStart_toStartOf="@+id/topWindow"
-        app:layout_constraintTop_toBottomOf="@id/userPhoto" />
+        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
+        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
+        app:layout_constraintTop_toBottomOf="@id/iv_userPhoto" />
 
     <TextView
-        android:id="@+id/career"
+        android:id="@+id/tv_career"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/career"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_14sp"
-        app:layout_constraintEnd_toEndOf="@+id/topWindow"
-        app:layout_constraintStart_toStartOf="@+id/topWindow"
-        app:layout_constraintTop_toTopOf="@+id/topWindow" />
+        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
+        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
+        app:layout_constraintTop_toTopOf="@+id/v_topWindow" />
 
     <TextView
-        android:id="@+id/homeAddress"
+        android:id="@+id/tv_userAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/address"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_14sp"
-        app:layout_constraintBottom_toTopOf="@+id/guidelineCenter"
+        app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/topWindow"
-        app:layout_constraintTop_toBottomOf="@id/career" />
+        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
+        app:layout_constraintTop_toBottomOf="@id/tv_career" />
 
 
     <Button
-        android:id="@+id/viewContactBtn"
+        android:id="@+id/btn_viewContact"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/margin_16dp"
@@ -117,7 +117,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/editProfileBtn"
+        android:id="@+id/btn_editProfile"
         android:layout_width="match_parent"
         android:layout_height="@dimen/edit_profile_button_size"
         android:layout_marginLeft="@dimen/margin_16dp"
@@ -129,26 +129,26 @@
         android:text="@string/edit_profile"
         android:textColor="?attr/colorPrimary"
         android:textSize="@dimen/text_size_14sp"
-        app:layout_constraintBottom_toTopOf="@+id/viewContactBtn"
+        app:layout_constraintBottom_toTopOf="@+id/btn_viewContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.helper.widget.Flow
-        android:id="@+id/flow2"
+        android:id="@+id/f_linksToAnotherSN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="facebook, insta"
+        app:constraint_referenced_ids="btn_facebook, btn_linkedIn"
         app:flow_horizontalGap="@dimen/margin_32dp"
         app:flow_horizontalStyle="spread_inside"
         app:flow_wrapMode="chain"
-        app:layout_constraintBottom_toTopOf="@+id/editProfileBtn"
+        app:layout_constraintBottom_toTopOf="@+id/btn_editProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guidelineCenter" />
+        app:layout_constraintTop_toTopOf="@+id/gl_guidelineCenter" />
 
 
     <Button
-        android:id="@+id/facebook"
+        android:id="@+id/btn_facebook"
         android:layout_width="@dimen/rect_btn_size_75dp"
         android:layout_height="@dimen/rect_btn_size_75dp"
         android:background="@drawable/btn_rect"
@@ -158,11 +158,11 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="@dimen/text_size_30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/flow2"
-        app:layout_constraintTop_toTopOf="@+id/flow2" />
+        app:layout_constraintStart_toStartOf="@+id/f_linksToAnotherSN"
+        app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
 
     <Button
-        android:id="@+id/insta"
+        android:id="@+id/btn_linkedIn"
         android:layout_width="@dimen/rect_btn_size_75dp"
         android:layout_height="@dimen/rect_btn_size_75dp"
         android:background="@drawable/btn_rect"
@@ -172,7 +172,7 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="@dimen/text_size_30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/flow2"
-        app:layout_constraintTop_toTopOf="@+id/flow2" />
+        app:layout_constraintEnd_toEndOf="@+id/f_linksToAnotherSN"
+        app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
