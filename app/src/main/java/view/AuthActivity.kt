@@ -12,7 +12,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication2.R
 import com.example.myapplication2.util.Parsers
 import com.example.myapplication2.view.MyProfile
-import com.google.android.material.snackbar.Snackbar
 
 class AuthActivity : AppCompatActivity(), View.OnClickListener {
 
