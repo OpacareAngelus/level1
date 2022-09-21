@@ -149,7 +149,7 @@
         android:textAlignment="center"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_16sp"
-        app:layout_constraintBottom_toTopOf="@id/btn_signIn"
+        app:layout_constraintBottom_toTopOf="@id/tv_sign_in"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_registration" />
@@ -162,26 +162,23 @@
         android:text="@string/ask_user_about_acc"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_signIn"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_sign_in"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btn_signIn" />
+        app:layout_constraintTop_toTopOf="@+id/tv_sign_in" />
 
-    <Button
-        android:id="@+id/btn_signIn"
+    <TextView
+        android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/minHeight"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_8dp"
-        android:backgroundTint="@color/no_color"
-        android:outlineAmbientShadowColor="@color/no_color"
-        android:outlineSpotShadowColor="@color/no_color"
         android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/text_size_24sp"
         app:layout_constraintBottom_toBottomOf="@+id/v_main"
         app:layout_constraintEnd_toEndOf="@id/v_main"
         app:layout_constraintStart_toEndOf="@+id/tv_didHaveAcc"
         app:layout_constraintTop_toBottomOf="@+id/tv_regConfirm"
-        tools:targetApi="p" />
+        tools:targetApi="p"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

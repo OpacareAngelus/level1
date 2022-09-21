@@ -146,7 +146,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:constraint_referenced_ids=" btn_remember, tv_didHaveAcc, btn_signIn"
+        app:constraint_referenced_ids=" btn_remember, tv_didHaveAcc, tv_sign_in"
         app:flow_horizontalStyle="spread"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toBottomOf="@id/v_main"
@@ -169,17 +169,15 @@
         android:textColor="?attr/colorOnSecondary"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_signIn"
+    <TextView
+        android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/minHeight"
-        android:backgroundTint="@color/no_color"
-        android:outlineAmbientShadowColor="@color/no_color"
-        android:outlineSpotShadowColor="@color/no_color"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8dp"
         android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/text_size_24sp"
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 

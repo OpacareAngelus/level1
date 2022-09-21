@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.myapplication2.R
@@ -17,7 +18,7 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var mainView: ConstraintLayout
     private lateinit var btnReg: Button
-    private lateinit var btnSignIn: Button
+    private lateinit var tvSignIn: TextView
     private lateinit var emailField: EditText
     private lateinit var passField: EditText
     private lateinit var sPref: SharedPreferences
@@ -32,8 +33,8 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
         //Program search all buttons and set listener.
         btnReg = findViewById(R.id.btn_registration)
         btnReg.setOnClickListener(this)
-        btnSignIn = findViewById(R.id.btn_signIn)
-        btnSignIn.setOnClickListener(this)
+        tvSignIn = findViewById(R.id.tv_sign_in)
+        tvSignIn.setOnClickListener(this)
         rememberBtn = findViewById(R.id.btn_remember)
 
         //Program create file with user data as shared preference.
@@ -43,7 +44,7 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
         mainView = findViewById(R.id.auth_activity)
         emailField = findViewById(R.id.et_email)
         passField = findViewById(R.id.et_password)
-        btnSignIn = findViewById(R.id.btn_signIn)
+        tvSignIn = findViewById(R.id.tv_sign_in)
 
         loadText()
     }
@@ -54,7 +55,7 @@ class AuthActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_registration -> {
                 regUser(intent)
             }
-            R.id.btn_signIn -> {
+            R.id.tv_sign_in -> {
                 checkPass(intent)
             }
             else -> {}
