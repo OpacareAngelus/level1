@@ -177,6 +177,7 @@
         android:outlineAmbientShadowColor="@color/no_color"
         android:outlineSpotShadowColor="@color/no_color"
         android:text="@string/sign_in"
+        android:textAllCaps="false"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/text_size_16sp"
         tools:ignore="MissingConstraints"
