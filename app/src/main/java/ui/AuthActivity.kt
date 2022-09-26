@@ -9,23 +9,23 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.level1.R
 import util.Parsers
 
 class AuthActivity : AppCompatActivity() {
 
-    private lateinit var btnReg: Button
-    private lateinit var tvSignIn: TextView
-    private lateinit var emailED: EditText
-    private lateinit var passED: EditText
-    private lateinit var sPref: SharedPreferences
-    private lateinit var users: SharedPreferences
-    private lateinit var rememberCB: CheckBox
+        private lateinit var btnReg: Button
+        private lateinit var tvSignIn: TextView
+        private lateinit var emailED: EditText
+        private lateinit var passED: EditText
+        private lateinit var sPref: SharedPreferences
+        private lateinit var users: SharedPreferences
+        private lateinit var rememberCB: CheckBox
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         //TODO read about ViewBinding and DataBinding(?)
         setContentView(R.layout.activity_auth)
         //Program search all buttons and set listener.
@@ -150,16 +150,18 @@ class AuthActivity : AppCompatActivity() {
 
     /**This fun test password as correct input.
      * If it's empty or have incorrect symbols - program back false.*/
-    private fun passwordCheck(): Boolean { return passED.text.isNotEmpty() }
+    private fun passwordCheck(): Boolean {
+        return passED.text.isNotEmpty()
+    }
 
     /**This fun test e-mail.
      * If it's empty or have incorrect symbols - program back false.*/
     private fun emailCheck(): Boolean {
         //Program test are field is empty or not. Also text must have "@" and ".".
         return emailED.text.contains("@") &&
-            emailED.text.contains(".") &&
-            emailED.text.split("@").first().contains(".") &&
-            emailED.text.isNotEmpty()
+                emailED.text.contains(".") &&
+                emailED.text.split("@").first().contains(".") &&
+                emailED.text.isNotEmpty()
 
     }
 
