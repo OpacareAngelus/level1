@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:transitionName="courseImage"
-    tools:context=".view.MyProfile">
+    tools:context="ui.MyProfileActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_guidelineCenter"
@@ -18,7 +18,7 @@
     <View
         android:id="@+id/v_topWindow"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/null_dp"
+        android:layout_height="0dp"
         android:background="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintBottom_toTopOf="@id/gl_guidelineCenter"
@@ -30,33 +30,31 @@
         android:id="@+id/btn_Settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
         android:text="@string/settings"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="@dimen/margin_large"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
         app:layout_constraintTop_toTopOf="@+id/v_topWindow" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:id="@+id/f_userData"
-        android:layout_width="@dimen/null_dp"
-        android:layout_height="@dimen/null_dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:orientation="vertical"
         app:constraint_referenced_ids="iv_userPhoto, tv_name, tv_career, tv_userAddress"
         app:flow_verticalStyle="packed"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
         app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
-        app:layout_constraintTop_toTopOf="@+id/v_topWindow"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/v_topWindow" />
 
     <ImageView
         android:id="@+id/iv_userPhoto"
-        android:layout_width="@dimen/user_photo_size_land"
-        android:layout_height="@dimen/user_photo_size_land"
+        android:layout_width="@dimen/user_photo_size"
+        android:layout_height="@dimen/user_photo_size"
         android:contentDescription="@string/user_photo"
         android:foreground="@drawable/img_shaper"
         android:scaleType="centerCrop"
@@ -104,7 +102,7 @@
         android:id="@+id/btn_viewContact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:backgroundTint="?attr/colorSecondary"
         android:minHeight="@dimen/minHeight_land_55dp"
         android:text="@string/view_contacts"
@@ -119,8 +117,8 @@
         android:id="@+id/btn_editProfile"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/edit_profile_button_size"
-        android:layout_marginStart="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
         android:background="@color/no_color"
         android:foreground="@drawable/frame_rounding"
         android:minWidth="@dimen/minWidth_land_210dp"
@@ -157,7 +155,7 @@
         android:foregroundTint="?attr/colorSecondary"
         android:text="@string/facebook_logo"
         android:textColor="?attr/colorSecondary"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="@dimen/margin_large"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/f_linksToAnotherSN"
         app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
@@ -171,7 +169,7 @@
         android:foregroundTint="?attr/colorSecondary"
         android:text="@string/insta_logo"
         android:textColor="?attr/colorSecondary"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="@dimen/margin_large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/f_linksToAnotherSN"
         app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />

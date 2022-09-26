@@ -1,15 +1,13 @@
-package com.example.myapplication2.view
+package ui
 
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication2.R
+import com.example.level1.R
 
+class MyProfileActivity : AppCompatActivity() {
 
-class MyProfile : AppCompatActivity() {
-
-    private lateinit var name: TextView
-
+    private lateinit var nameTV: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,8 +15,8 @@ class MyProfile : AppCompatActivity() {
         setContentView(R.layout.my_profile)
 
         //In this part program take info from auth_activity. It's firstname and second name.
-        name = findViewById(R.id.tv_name)
+        nameTV = findViewById(R.id.tv_name)
         //Program set this firstname and second name in user profile.
-        name.text = intent.getStringExtra("name")
+        nameTV.text = intent.getStringExtra("name")
     }
 }

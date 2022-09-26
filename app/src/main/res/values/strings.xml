@@ -2,8 +2,8 @@
 <resources>
     <string name="facebook_logo">F</string>
     <string name="insta_logo">in</string>
-    <string name="app_name">My Application</string>
-    <string name="view_contacts">VIEW my contacts</string>
+    <string name="app_name">level1</string>
+    <string name="view_contacts">view my contacts</string>
     <string name="name">name</string>
     <string name="career">career</string>
     <string name="address">address</string>
@@ -18,9 +18,12 @@
     <string name="password">Password</string>
     <string name="check_box_remember_me">Remember me</string>
     <string name="or">or</string>
-    <string name="register">REGISTER</string>
+    <string name="register">Register</string>
     <string name="register_confirm_that">By clicking Register you agree to our Terms and Conditions</string>
     <string name="ask_user_about_acc">Already have an account?</string>
     <string name="google_button">google_button</string>
     <string name="sign_in">Sign In</string>
+    <string name="invalid_password">Invalid password.</string>
+    <string name="invalid_email">Invalid email.</string>
+    <string name="this_mail_using">User with this e-mail is now registered.</string>
 </resources>

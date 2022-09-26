@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_small">8dp</dimen>
     <dimen name="margin_normal">16dp</dimen>
-    <dimen name="margin_large">24sp</dimen>
     <dimen name="margin_48dp">48dp</dimen>
     <dimen name="margin_32dp">32dp</dimen>
     <dimen name="width_3dp">3dp</dimen>
     <dimen name="text_size_14sp">14sp</dimen>
+    <dimen name="margin_large">24sp</dimen>
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
     <dimen name="edit_profile_button_size">40dp</dimen>
-    <dimen name="user_photo_size">113dp</dimen>
+    <dimen name="user_photo_size">63dp</dimen>
     <dimen name="text_size_12sp">12sp</dimen>
+    <dimen name="margin_small">8dp</dimen>
     <dimen name="minHeight">48dp</dimen>
     <dimen name="margin_100dp">100dp</dimen>
     <dimen name="minHeight60dp">60dp</dimen>

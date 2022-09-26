@@ -2,7 +2,7 @@
 <resources>
     <string name="facebook_logo">F</string>
     <string name="insta_logo">in</string>
-    <string name="app_name">Мій додаток</string>
+    <string name="app_name">Рівень1</string>
     <string name="view_contacts">Переглянути контакти</string>
     <string name="name">Ім\'я</string>
     <string name="career">Професія</string>
@@ -23,4 +23,7 @@
     <string name="ask_user_about_acc">Вже маєте аккаунт?</string>
     <string name="google_button">google_button</string>
     <string name="sign_in">Увійти</string>
+    <string name="invalid_password">Невірний пароль.</string>
+    <string name="invalid_email">Невірний e-mail.</string>
+    <string name="this_mail_using">Цей e-mail вже зареєстрований.</string>
 </resources>

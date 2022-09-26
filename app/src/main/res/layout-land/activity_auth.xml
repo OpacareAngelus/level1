@@ -5,7 +5,7 @@
     android:id="@+id/auth_activity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="view.AuthActivity">
+    tools:context="ui.AuthActivity">
 
     <View
         android:id="@+id/v_main"
@@ -18,10 +18,10 @@
         android:id="@+id/tv_greetingMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="@string/greetings_message"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="@dimen/margin_large"
         app:layout_constraintBottom_toTopOf="@id/tv_loginTip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,7 +31,7 @@
         android:id="@+id/tv_loginTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="@string/login_tip_1"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/text_size_12sp"
@@ -44,9 +44,9 @@
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_8dp"
-        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:autofillHints="emailAddress"
         android:backgroundTint="?attr/colorOnSecondary"
         android:hint="@string/e_mail"
@@ -63,9 +63,9 @@
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_16dp"
-        android:layout_marginTop="@dimen/margin_8dp"
-        android:layout_marginEnd="@dimen/margin_16dp"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="@dimen/margin_normal"
         android:autofillHints="password"
         android:backgroundTint="?attr/colorOnSecondary"
         android:hint="@string/password"
@@ -98,15 +98,14 @@
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
-
+    bias
     <TextView
         android:id="@+id/tv_or"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="53dp"
         android:text="@string/or"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="@dimen/margin_large"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -123,15 +122,14 @@
         app:strokeColor="?attr/colorSecondary"
         app:strokeWidth="@dimen/width_3dp"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="510dp"
-        tools:layout_editor_absoluteY="177dp"
+
         tools:targetApi="p" />
 
     <TextView
         android:id="@+id/tv_regConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="@string/register_confirm_that"
         android:textAlignment="center"
         android:textColor="?attr/colorOnSecondary"
@@ -173,11 +171,11 @@
         android:id="@+id/tv_sign_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_8dp"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_24sp"
+        android:textSize="@dimen/margin_large"
         tools:ignore="MissingConstraints"
         tools:targetApi="p" />
 

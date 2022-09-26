@@ -8,11 +8,9 @@
     <color name="main_text_color">#FFFFFFFF</color>
     <color name="second_text_color">#B2B2B3</color>
     <color name="button_dark_blue">#18181F</color>
-    <!--Dark theme.-->
     <color name="d_khaki">#495141</color>
     <color name="d_khaki_light">#98A888</color>
     <color name="d_khaki_hard">#2A2E25</color>
     <color name="d_gold">#F1BC1E</color>
     <color name="d_yellow">#63620C</color>
-
 </resources>
