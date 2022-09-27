@@ -75,7 +75,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_email" />
 
     <CheckBox
-        android:id="@+id/btn_remember"
+        android:id="@+id/cb_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_normal"

@@ -144,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:constraint_referenced_ids=" btn_remember, tv_didHaveAcc, tv_sign_in"
+        app:constraint_referenced_ids=" cb_remember, tv_didHaveAcc, tv_sign_in"
         app:flow_horizontalStyle="spread"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toBottomOf="@id/v_main"
@@ -160,7 +160,7 @@
         tools:ignore="MissingConstraints" />
 
     <CheckBox
-        android:id="@+id/btn_remember"
+        android:id="@+id/cb_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/check_box_remember_me"

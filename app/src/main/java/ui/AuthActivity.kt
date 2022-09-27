@@ -3,6 +3,7 @@ package ui
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.renderscript.ScriptGroup
 import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
@@ -11,45 +12,36 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.level1.R
+import com.example.level1.databinding.ActivityAuthBinding
+import com.example.level1.databinding.MyProfileBinding
 import util.Parsers
 
 class AuthActivity : AppCompatActivity() {
 
-        private lateinit var btnReg: Button
-        private lateinit var tvSignIn: TextView
-        private lateinit var emailED: EditText
-        private lateinit var passED: EditText
-        private lateinit var sPref: SharedPreferences
-        private lateinit var users: SharedPreferences
-        private lateinit var rememberCB: CheckBox
 
+    private lateinit var sPref: SharedPreferences
+    private lateinit var users: SharedPreferences
+
+    private lateinit var binding: ActivityAuthBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //TODO read about ViewBinding and DataBinding(?)
+        binding = ActivityAuthBinding.inflate(layoutInflater)
         setContentView(R.layout.activity_auth)
-        //Program search all buttons and set listener.
-        btnReg = findViewById(R.id.btn_registration)
-        tvSignIn = findViewById(R.id.tv_sign_in)
-        rememberCB = findViewById(R.id.btn_remember)
-
+        val view = binding.root
+        setContentView(view)
         //Program create file with user data as shared preference.
         users = getSharedPreferences("Users", MODE_PRIVATE) //Move "Users" to constants
 
-        //Program search all elements which need and add to vars.
-        emailED = findViewById(R.id.et_email)
-        passED = findViewById(R.id.et_password)
-        tvSignIn = findViewById(R.id.tv_sign_in)
-
-        loadText()
         setListeners()
+        loadText()
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         Log.d("AuthActivity", "onSaveInstanceState")
-        outState.putString("e_mail", emailED.text.toString())
-        outState.putString("password", passED.text.toString())
+        outState.putString("e_mail", binding.etEmail.text.toString())
+        outState.putString("password", binding.etPassword.text.toString())
     }
 
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
@@ -57,14 +49,14 @@ class AuthActivity : AppCompatActivity() {
         Log.d("AuthActivity", "savedInstanceState")
 
         var savedText = savedInstanceState.getString("e_mail", "")
-        emailED.setText(savedText)
+        binding.etEmail.setText(savedText)
         savedText = savedInstanceState.getString("password", "")
-        passED.setText(savedText)
+        binding.etPassword.setText(savedText)
     }
 
     override fun onStop() {
         super.onStop()
-        if (rememberCB.isChecked) saveText()
+        if (binding.cbRemember.isChecked) saveText()
     }
 
     private fun setListeners() {
@@ -72,33 +64,33 @@ class AuthActivity : AppCompatActivity() {
     }
 
     private fun setOnClickListeners() {
-        btnReg.setOnClickListener {
+        binding.btnRegistration.setOnClickListener {
             val intent = Intent(this, MyProfileActivity::class.java)
             regUser(intent)
         }
-        tvSignIn.setOnClickListener {
+        binding.tvSignIn.setOnClickListener {
             val intent = Intent(this, MyProfileActivity::class.java)
             checkPass(intent)
         }
     }
 
     /**This fun check password.
-     * If password correct - program chance activity and user see new layout(profile).
+     * If password correct - program change activity and user see new layout(profile).
      *
      * @param intent - program send parsed mail (second and first name to next activity) if password
      * correct with this intent.*/
     private fun checkPass(intent: Intent) {
         if (!allChecks())
             return
-        val userName = Parsers.parseMail(emailED.text.toString())
+        val userName = Parsers.parseMail(binding.etEmail.text.toString())
         val userData = users.getString(userName, "")?.split("&")?.last()
-        if (userData.equals(passED.text.toString())) {
+        if (userData.equals(binding.etPassword.text.toString())) {
             intent.putExtra("name", userName)
             startActivity(intent)
             overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
             finish()
         } else {
-            passED.error = "Incorrect password."
+            binding.etPassword.error = "Incorrect password."
             return
         }
     }
@@ -108,15 +100,15 @@ class AuthActivity : AppCompatActivity() {
      * Next time user need put "Sigh in" when user use correct e-mail and password. */
     private fun regUser(intent: Intent) {
         if (emailCheck() && passwordCheck()) {
-            val userName = Parsers.parseMail(emailED.text.toString())
+            val userName = Parsers.parseMail(binding.etEmail.text.toString())
             val ed: SharedPreferences.Editor = users.edit()
             val validTest = users.getString(userName, "")?.split("&")?.first().toString()
-            if (validTest == emailED.text.toString()) {
-                emailED.error =
+            if (validTest == binding.etEmail.text.toString()) {
+                binding.etEmail.error =
                     getString(R.string.this_mail_using)
                 return
             } else {
-                ed.putString(userName, "${emailED.text}&${passED.text}")
+                ed.putString(userName, "${binding.etEmail.text}&${binding.etPassword.text}")
                 ed.apply()
                 intent.putExtra(getString(R.string.name), userName)
                 startActivity(intent)
@@ -131,18 +123,18 @@ class AuthActivity : AppCompatActivity() {
     private fun allChecks(): Boolean {
         //When e-mail didn't used before and sure password wrong too.
         if (!emailCheck() && !passwordCheck()) {
-            emailED.error = getString(R.string.invalid_email)
-            passED.error = getString(R.string.invalid_password)
+            binding.etEmail.error = getString(R.string.invalid_email)
+            binding.etPassword.error = getString(R.string.invalid_password)
             return false
         }
         //When e-mail didn't used before.
         if (!emailCheck() && passwordCheck()) {
-            emailED.error = getString(R.string.invalid_email)
+            binding.etEmail.error = getString(R.string.invalid_email)
             return false
         }
         //When password is wrong for this e-mail.
         if (emailCheck() && !passwordCheck()) {
-            passED.error = getString(R.string.invalid_password)
+            binding.etPassword.error = getString(R.string.invalid_password)
             return false
         }
         return true
@@ -151,17 +143,17 @@ class AuthActivity : AppCompatActivity() {
     /**This fun test password as correct input.
      * If it's empty or have incorrect symbols - program back false.*/
     private fun passwordCheck(): Boolean {
-        return passED.text.isNotEmpty()
+        return binding.etPassword.text.isNotEmpty()
     }
 
     /**This fun test e-mail.
      * If it's empty or have incorrect symbols - program back false.*/
     private fun emailCheck(): Boolean {
         //Program test are field is empty or not. Also text must have "@" and ".".
-        return emailED.text.contains("@") &&
-                emailED.text.contains(".") &&
-                emailED.text.split("@").first().contains(".") &&
-                emailED.text.isNotEmpty()
+        return binding.etEmail.text.contains("@") &&
+                binding.etEmail.text.contains(".") &&
+                binding.etEmail.text.split("@").first().contains(".") &&
+                binding.etEmail.text.isNotEmpty()
 
     }
 
@@ -169,8 +161,8 @@ class AuthActivity : AppCompatActivity() {
     private fun saveText() {
         sPref = getPreferences(MODE_PRIVATE)
         val ed: SharedPreferences.Editor = sPref.edit()
-        ed.putString("e_mail", emailED.text.toString())
-        ed.putString("password", passED.text.toString())
+        ed.putString("e_mail", binding.etEmail.text.toString())
+        ed.putString("password", binding.etPassword.text.toString())
         ed.apply()
     }
 
@@ -178,9 +170,9 @@ class AuthActivity : AppCompatActivity() {
     private fun loadText() {
         sPref = getPreferences(MODE_PRIVATE)
         var savedText = sPref.getString("e_mail", "")
-        emailED.setText(savedText)
+        binding.etEmail.setText(savedText)
         savedText = sPref.getString("password", "")
-        passED.setText(savedText)
+        binding.etPassword.setText(savedText)
     }
 }
 
