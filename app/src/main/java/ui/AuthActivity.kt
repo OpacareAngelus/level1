@@ -3,18 +3,11 @@ package ui
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.renderscript.ScriptGroup
 import android.util.Log
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.level1.R
 import com.example.level1.databinding.ActivityAuthBinding
-import com.example.level1.databinding.MyProfileBinding
-import util.Parsers
+import util.ParsingEMailToName
 
 class AuthActivity : AppCompatActivity() {
 
@@ -82,7 +75,7 @@ class AuthActivity : AppCompatActivity() {
     private fun checkPass(intent: Intent) {
         if (!allChecks())
             return
-        val userName = Parsers.parseMail(binding.etEmail.text.toString())
+        val userName = ParsingEMailToName.parseMail(binding.etEmail.text.toString())
         val userData = users.getString(userName, "")?.split("&")?.last()
         if (userData.equals(binding.etPassword.text.toString())) {
             intent.putExtra("name", userName)
@@ -100,7 +93,7 @@ class AuthActivity : AppCompatActivity() {
      * Next time user need put "Sigh in" when user use correct e-mail and password. */
     private fun regUser(intent: Intent) {
         if (emailCheck() && passwordCheck()) {
-            val userName = Parsers.parseMail(binding.etEmail.text.toString())
+            val userName = ParsingEMailToName.parseMail(binding.etEmail.text.toString())
             val ed: SharedPreferences.Editor = users.edit()
             val validTest = users.getString(userName, "")?.split("&")?.first().toString()
             if (validTest == binding.etEmail.text.toString()) {
