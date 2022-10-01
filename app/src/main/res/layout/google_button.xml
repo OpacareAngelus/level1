@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
 
 
     <View
         android:id="@+id/buttonView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/frame_rounding"
+        android:background="@drawable/frame_rounding_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:constraint_referenced_ids="ivGoogle, tvGoogle"
+        app:flow_horizontalGap="@dimen/margin_mid"
+        app:flow_horizontalStyle="spread"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonView"
+        app:layout_constraintStart_toStartOf="@+id/buttonView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -21,21 +36,14 @@
         android:gravity="center_vertical"
         android:text="@string/sign_in_google"
         android:textColor="?attr/colorOnPrimary"
-        android:textStyle="bold"
         android:textSize="@dimen/large_text"
-        app:layout_constraintBottom_toBottomOf="@+id/buttonView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/ivGoogle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/tvGoogle"
-        app:layout_constraintEnd_toStartOf="@+id/tvGoogle"
-        app:layout_constraintStart_toStartOf="@+id/buttonView"
-        app:layout_constraintTop_toTopOf="@+id/tvGoogle"
+        android:layout_marginEnd="@dimen/margin_small"
         app:srcCompat="@drawable/google_logo" />
 
 

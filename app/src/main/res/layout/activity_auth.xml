@@ -37,14 +37,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_greetingMessage" />
-    
+
     <EditText
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_mid"
         android:autofillHints="emailAddress"
         android:backgroundTint="?attr/colorOnSecondary"
         android:hint="@string/e_mail"
@@ -60,9 +60,9 @@
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_mid"
         android:autofillHints="password"
         android:backgroundTint="?attr/colorOnSecondary"
         android:hint="@string/password"
@@ -78,7 +78,7 @@
         android:id="@+id/cb_remember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginTop="@dimen/margin_small"
         android:text="@string/check_box_remember_me"
         android:textColor="?attr/colorOnSecondary"
@@ -87,16 +87,15 @@
 
     <com.example.myapplication.customView.GoogleButtonView
         android:id="@+id/btn_google"
-        android:layout_marginHorizontal="@dimen/margin_normal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/minHeight"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_height="@dimen/min_height_google_btn"
+        android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginTop="@dimen/margin_100dp"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_mid"
         app:layout_constraintBottom_toTopOf="@id/tv_or"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_password"/>
+        app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <TextView
         android:id="@+id/tv_or"
@@ -114,8 +113,8 @@
         android:id="@+id/btn_registration"
         android:layout_width="match_parent"
         android:layout_height="@dimen/minHeight"
-        android:layout_marginStart="@dimen/margin_normal"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_mid"
+        android:layout_marginEnd="@dimen/margin_mid"
         android:backgroundTint="@color/no_color"
         android:outlineAmbientShadowColor="@color/no_color"
         android:outlineSpotShadowColor="@color/no_color"

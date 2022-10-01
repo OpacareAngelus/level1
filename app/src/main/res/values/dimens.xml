@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_small">8dp</dimen>
-    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_mid">16dp</dimen>
     <dimen name="margin_large">24sp</dimen>
 
     <dimen name="small_text">14sp</dimen>
@@ -22,4 +22,6 @@
     <dimen name="rect_btn_size_75dp">75dp</dimen>
     <dimen name="minHeight_land_55dp">55dp</dimen>
     <dimen name="minWidth_land_210dp">210dp</dimen>
+    <dimen name="min_height_google_btn">36dp</dimen>
+    <dimen name="width_google_btn">160dp</dimen>
 </resources>

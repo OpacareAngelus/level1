@@ -44,9 +44,9 @@
         android:id="@+id/et_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_mid"
         android:autofillHints="emailAddress"
         android:backgroundTint="?attr/colorOnSecondary"
         android:hint="@string/e_mail"
@@ -63,9 +63,9 @@
         android:id="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_mid"
         android:autofillHints="password"
         android:backgroundTint="?attr/colorOnSecondary"
         android:hint="@string/password"
@@ -92,13 +92,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
-    <com.google.android.gms.common.SignInButton
+    <com.example.myapplication.customView.GoogleButtonView
         android:id="@+id/btn_google"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:targetApi="p" />
-    bias
+        android:layout_width="@dimen/width_google_btn"
+        android:layout_height="@dimen/minHeight"
+        android:layout_marginStart="@dimen/margin_mid"
+        android:layout_marginTop="@dimen/margin_100dp"
+        android:layout_marginEnd="@dimen/margin_mid"
+        tools:ignore="MissingConstraints" />
+
     <TextView
         android:id="@+id/tv_or"
         android:layout_width="wrap_content"
