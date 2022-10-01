@@ -22,6 +22,6 @@
     <dimen name="rect_btn_size_75dp">75dp</dimen>
     <dimen name="minHeight_land_55dp">55dp</dimen>
     <dimen name="minWidth_land_210dp">210dp</dimen>
-    <dimen name="min_height_google_btn">36dp</dimen>
+    <dimen name="min_height_google_btn">48dp</dimen>
     <dimen name="width_google_btn">160dp</dimen>
 </resources>

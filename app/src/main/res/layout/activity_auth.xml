@@ -116,6 +116,7 @@
         android:layout_marginStart="@dimen/margin_mid"
         android:layout_marginEnd="@dimen/margin_mid"
         android:backgroundTint="@color/no_color"
+        android:foreground="@drawable/frame_rounding_color_secondary"
         android:outlineAmbientShadowColor="@color/no_color"
         android:outlineSpotShadowColor="@color/no_color"
         android:text="@string/register"
@@ -125,8 +126,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_or"
-        app:strokeColor="?attr/colorSecondary"
-        app:strokeWidth="@dimen/width_3dp"
         tools:targetApi="p" />
 
     <TextView
