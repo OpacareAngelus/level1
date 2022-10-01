@@ -20,7 +20,6 @@ class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAuthBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_auth)
         val view = binding.root
         setContentView(view)
         //Program create file with user data as shared preference.

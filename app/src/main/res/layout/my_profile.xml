@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_18sp"
+        android:textSize="@dimen/large_text"
         app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
         app:layout_constraintTop_toBottomOf="@id/iv_userPhoto" />
@@ -81,7 +81,7 @@
         android:layout_height="wrap_content"
         android:text="@string/career"
         android:textColor="?attr/colorOnSecondary"
-        android:textSize="@dimen/text_size_14sp"
+        android:textSize="@dimen/small_text"
         app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
         app:layout_constraintTop_toTopOf="@+id/v_topWindow" />
@@ -92,7 +92,7 @@
         android:layout_height="wrap_content"
         android:text="@string/address"
         android:textColor="?attr/colorOnSecondary"
-        android:textSize="@dimen/text_size_14sp"
+        android:textSize="@dimen/small_text"
         app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
@@ -109,7 +109,7 @@
         android:backgroundTint="?attr/colorSecondary"
         android:text="@string/view_contacts"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/mid_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -125,8 +125,9 @@
         android:foreground="@drawable/frame_rounding"
         android:text="@string/edit_profile"
         android:textAllCaps="false"
+        android:textStyle="bold"
         android:textColor="?attr/colorPrimary"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/mid_text"
         app:layout_constraintBottom_toTopOf="@+id/btn_viewContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

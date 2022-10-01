@@ -26,4 +26,5 @@
     <string name="invalid_password">Invalid password.</string>
     <string name="invalid_email">Invalid email.</string>
     <string name="this_mail_using">User with this e-mail is now registered.</string>
+    <string name="sign_in_google">Sign In</string>
 </resources>

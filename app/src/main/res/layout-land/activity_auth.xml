@@ -118,7 +118,7 @@
         android:outlineSpotShadowColor="@color/no_color"
         android:text="@string/register"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/text_size_18sp"
+        android:textSize="@dimen/large_text"
         app:strokeColor="?attr/colorSecondary"
         app:strokeWidth="@dimen/width_3dp"
         tools:ignore="MissingConstraints"
@@ -133,7 +133,7 @@
         android:text="@string/register_confirm_that"
         android:textAlignment="center"
         android:textColor="?attr/colorOnSecondary"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/mid_text"
         app:layout_constraintBottom_toTopOf="@id/flow3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -156,7 +156,7 @@
         android:layout_height="wrap_content"
         android:text="@string/ask_user_about_acc"
         android:textColor="?attr/colorOnSecondary"
-        android:textSize="@dimen/text_size_16sp"
+        android:textSize="@dimen/mid_text"
         tools:ignore="MissingConstraints" />
 
     <CheckBox

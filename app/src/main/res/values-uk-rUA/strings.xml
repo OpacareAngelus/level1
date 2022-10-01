@@ -26,4 +26,5 @@
     <string name="invalid_password">Невірний пароль.</string>
     <string name="invalid_email">Невірний e-mail.</string>
     <string name="this_mail_using">Цей e-mail вже зареєстрований.</string>
+    <string name="sign_in_google">Sign In</string>
 </resources>
