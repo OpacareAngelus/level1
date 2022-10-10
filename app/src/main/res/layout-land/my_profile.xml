@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/btn_Settings"
+        android:id="@+id/tv_Settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_mid"
@@ -158,8 +158,7 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="@dimen/margin_large"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/f_linksToAnotherSN"
-        app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_linkedIn"
@@ -172,7 +171,6 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="@dimen/margin_large"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/f_linksToAnotherSN"
-        app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

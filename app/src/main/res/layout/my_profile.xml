@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/btn_Settings"
+        android:id="@+id/tv_Settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_mid"
@@ -46,6 +46,7 @@
         app:constraint_referenced_ids="iv_userPhoto, tv_name, tv_career, tv_userAddress"
         app:flow_verticalStyle="packed"
         app:flow_wrapMode="chain"
+        app:flow_verticalGap="@dimen/margin_small"
         app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
         app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
@@ -59,10 +60,7 @@
         android:contentDescription="@string/user_photo"
         android:foreground="@drawable/img_shaper"
         android:scaleType="centerCrop"
-        android:src="@drawable/user_photo"
-        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
-        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
-        app:layout_constraintTop_toTopOf="@id/v_topWindow" />
+        android:src="@drawable/user_photo" />
 
     <TextView
         android:id="@+id/tv_name"
@@ -70,10 +68,7 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/large_text"
-        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
-        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
-        app:layout_constraintTop_toBottomOf="@id/iv_userPhoto" />
+        android:textSize="@dimen/large_text" />
 
     <TextView
         android:id="@+id/tv_career"
@@ -81,10 +76,7 @@
         android:layout_height="wrap_content"
         android:text="@string/career"
         android:textColor="?attr/colorOnSecondary"
-        android:textSize="@dimen/small_text"
-        app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
-        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
-        app:layout_constraintTop_toTopOf="@+id/v_topWindow" />
+        android:textSize="@dimen/small_text" />
 
     <TextView
         android:id="@+id/tv_userAddress"
@@ -93,10 +85,7 @@
         android:text="@string/address"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/small_text"
-        app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/v_topWindow"
-        app:layout_constraintTop_toBottomOf="@id/tv_career" />
+ />
 
 
     <Button
@@ -125,9 +114,9 @@
         android:foreground="@drawable/frame_rounding_color_primary_variant"
         android:text="@string/edit_profile"
         android:textAllCaps="false"
-        android:textStyle="bold"
         android:textColor="?attr/colorPrimary"
         android:textSize="@dimen/mid_text"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/btn_viewContact"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -157,8 +146,7 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="@dimen/text_size_30sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/f_linksToAnotherSN"
-        app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_linkedIn"
@@ -171,7 +159,6 @@
         android:textColor="?attr/colorSecondary"
         android:textSize="@dimen/text_size_30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/f_linksToAnotherSN"
-        app:layout_constraintTop_toTopOf="@+id/f_linksToAnotherSN" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
