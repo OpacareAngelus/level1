@@ -44,9 +44,9 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         app:constraint_referenced_ids="iv_userPhoto, tv_name, tv_career, tv_userAddress"
+        app:flow_verticalGap="@dimen/margin_small"
         app:flow_verticalStyle="packed"
         app:flow_wrapMode="chain"
-        app:flow_verticalGap="@dimen/margin_small"
         app:layout_constraintBottom_toTopOf="@+id/gl_guidelineCenter"
         app:layout_constraintEnd_toEndOf="@+id/v_topWindow"
         app:layout_constraintStart_toStartOf="@+id/v_topWindow"
@@ -68,7 +68,8 @@
         android:layout_height="wrap_content"
         android:text="@string/name"
         android:textColor="?attr/colorOnPrimary"
-        android:textSize="@dimen/large_text" />
+        android:textSize="@dimen/large_text"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_career"
@@ -76,7 +77,8 @@
         android:layout_height="wrap_content"
         android:text="@string/career"
         android:textColor="?attr/colorOnSecondary"
-        android:textSize="@dimen/small_text" />
+        android:textSize="@dimen/small_text"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tv_userAddress"
@@ -85,7 +87,7 @@
         android:text="@string/address"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/small_text"
- />
+        tools:ignore="MissingConstraints" />
 
 
     <Button
@@ -125,40 +127,28 @@
         android:id="@+id/f_linksToAnotherSN"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:constraint_referenced_ids="btn_facebook, btn_linkedIn"
+        app:constraint_referenced_ids="iv_facebook, iv_linkedIn"
         app:flow_horizontalGap="@dimen/margin_32dp"
         app:flow_horizontalStyle="spread_inside"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toTopOf="@+id/btn_editProfile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/gl_guidelineCenter" />
+        app:layout_constraintTop_toTopOf="@+id/gl_guidelineCenter">
+    </androidx.constraintlayout.helper.widget.Flow>
 
-
-    <Button
-        android:id="@+id/btn_facebook"
-        android:layout_width="@dimen/rect_btn_size_75dp"
-        android:layout_height="@dimen/rect_btn_size_75dp"
-        android:background="@drawable/btn_rect"
-        android:foreground="@drawable/btn_rect"
-        android:foregroundTint="?attr/colorSecondary"
-        android:text="@string/facebook_logo"
-        android:textColor="?attr/colorSecondary"
-        android:textSize="@dimen/text_size_30sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/iv_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/facebook_logo"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_linkedIn"
-        android:layout_width="@dimen/rect_btn_size_75dp"
-        android:layout_height="@dimen/rect_btn_size_75dp"
-        android:background="@drawable/btn_rect"
-        android:foreground="@drawable/btn_rect"
-        android:foregroundTint="?attr/colorSecondary"
-        android:text="@string/insta_logo"
-        android:textColor="?attr/colorSecondary"
-        android:textSize="@dimen/text_size_30sp"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/iv_linkedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linkedin_logo"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

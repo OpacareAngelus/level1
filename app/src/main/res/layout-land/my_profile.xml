@@ -108,7 +108,7 @@
         android:text="@string/view_contacts"
         android:textColor="?attr/colorOnPrimary"
         android:textSize="@dimen/mid_text"
-        app:layout_constraintBottom_toBottomOf="@id/btn_editProfile"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/f_linksToAnotherSN"
         app:layout_constraintTop_toBottomOf="@id/f_linksToAnotherSN" />
@@ -118,7 +118,6 @@
         android:layout_width="wrap_content"
         android:layout_height="@dimen/edit_profile_button_size"
         android:layout_marginStart="@dimen/margin_mid"
-        android:layout_marginTop="@dimen/margin_small"
         android:background="@color/no_color"
         android:foreground="@drawable/frame_rounding_color_primary_variant"
         android:minWidth="@dimen/minWidth_land_210dp"
@@ -127,7 +126,7 @@
         android:textColor="?attr/colorPrimary"
         android:textSize="@dimen/mid_text"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_viewContact"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/f_linksToAnotherSN"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/f_linksToAnotherSN" />
@@ -137,7 +136,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_32dp"
-        app:constraint_referenced_ids="btn_facebook, btn_linkedIn"
+        app:constraint_referenced_ids="iv_facebook, iv_linkedIn"
         app:flow_horizontalGap="@dimen/margin_32dp"
         app:flow_horizontalStyle="spread_inside"
         app:flow_wrapMode="chain"
@@ -146,31 +145,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/gl_guidelineCenter" />
 
-
-    <Button
-        android:id="@+id/btn_facebook"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/btn_rect"
-        android:foreground="@drawable/btn_rect"
-        android:foregroundTint="?attr/colorSecondary"
-        android:text="@string/facebook_logo"
-        android:textColor="?attr/colorSecondary"
-        android:textSize="@dimen/margin_large"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/iv_facebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/facebook_logo"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:id="@+id/btn_linkedIn"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:background="@drawable/btn_rect"
-        android:foreground="@drawable/btn_rect"
-        android:foregroundTint="?attr/colorSecondary"
-        android:text="@string/insta_logo"
-        android:textColor="?attr/colorSecondary"
-        android:textSize="@dimen/margin_large"
-        android:textStyle="bold"
+    <ImageView
+        android:id="@+id/iv_linkedIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linkedin_logo"
         tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

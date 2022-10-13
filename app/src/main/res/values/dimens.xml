@@ -24,4 +24,5 @@
     <dimen name="minWidth_land_210dp">210dp</dimen>
     <dimen name="min_height_google_btn">48dp</dimen>
     <dimen name="width_google_btn">160dp</dimen>
+    <dimen name="large_text_test">40sp</dimen>
 </resources>
