@@ -1,4 +1,4 @@
-package ui
+package activity
 
 import android.content.Intent
 import android.content.SharedPreferences

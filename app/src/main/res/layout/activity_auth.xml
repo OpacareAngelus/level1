@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorPrimary"
-    tools:context="ui.AuthActivity">
+    tools:context="activity.AuthActivity">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_top"
@@ -146,11 +146,11 @@
         android:id="@+id/tv_didHaveAcc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_48dp"
         android:text="@string/ask_user_about_acc"
         android:textColor="?attr/colorOnSecondary"
         android:textSize="@dimen/mid_text"
         app:layout_constraintBottom_toBottomOf="@+id/tv_sign_in"
+        app:layout_constraintEnd_toStartOf="@id/tv_sign_in"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_sign_in" />
 
