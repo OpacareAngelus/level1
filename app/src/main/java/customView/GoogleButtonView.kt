@@ -179,14 +179,6 @@ class GoogleButtonView @JvmOverloads constructor(
             R.styleable.GoogleCustomView_rotationG,
             DEFAULT_TURN_G
         ).toDouble() / 2.7).toFloat()
-        durationAnimationGoogle = typedArray.getDimension(
-            R.styleable.GoogleCustomView_duration_animation,
-            DURATION_ANIMATION_GOOGLE.toFloat()
-        ).toLong()
-        moveLongBetweenLater = typedArray.getDimension(
-            R.styleable.GoogleCustomView_move_letter_animation,
-            DEFAULT_TURN_G
-        ).toInt()
 
         typedArray.recycle()
 
