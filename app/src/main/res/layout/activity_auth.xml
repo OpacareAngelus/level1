@@ -86,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <com.example.myapplication.customView.GoogleButtonView
-        android:id="@+id/btn_google"
+        android:id="@+id/cv_google"
         android:layout_width="match_parent"
         android:layout_height="@dimen/min_height_google_btn"
         android:layout_marginStart="@dimen/margin_mid"
@@ -107,7 +107,7 @@
         app:layout_constraintBottom_toTopOf="@id/btn_registration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_google" />
+        app:layout_constraintTop_toBottomOf="@+id/cv_google" />
 
     <Button
         android:id="@+id/btn_registration"

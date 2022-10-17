@@ -84,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="70dp"
         android:orientation="horizontal"
-        app:constraint_referenced_ids=" btn_registration, tv_or, btn_google"
+        app:constraint_referenced_ids=" btn_registration, tv_or, cv_google"
         app:flow_horizontalStyle="spread"
         app:flow_wrapMode="chain"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
         app:layout_constraintTop_toBottomOf="@+id/et_password" />
 
     <com.example.myapplication.customView.GoogleButtonView
-        android:id="@+id/btn_google"
+        android:id="@+id/cv_google"
         android:layout_width="@dimen/width_google_btn"
         android:layout_height="@dimen/minHeight"
         android:layout_marginStart="@dimen/margin_mid"
