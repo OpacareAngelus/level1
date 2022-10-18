@@ -28,6 +28,5 @@ object Constants {
         const val DEFAULT_COLOR_RED_GOOGLE = "#EB4335"
         const val DEFAULT_COLOR_YELLOW_GOOGLE = "#FBBC05"
         const val DEFAULT_COLOR_GREEN_GOOGLE = "#34A853"
-        const val DURATION_ANIMATION_GOOGLE = 500L
 
 }

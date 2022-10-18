@@ -22,7 +22,6 @@ import util.Constants.DEFAULT_SIZE_WIDTH_GOOGLE
 import util.Constants.DEFAULT_TEXT_COLOR_GOOGLE
 import util.Constants.DEFAULT_TEXT_SIZE
 import util.Constants.DEFAULT_TURN_G
-import util.Constants.DURATION_ANIMATION_GOOGLE
 import util.Constants.G_ARC_OF_SET_BLUE
 import util.Constants.G_ARC_OF_SET_GREEN
 import util.Constants.G_ARC_OF_SET_RED
@@ -42,7 +41,6 @@ class GoogleButtonView @JvmOverloads constructor(
 ) : View(context, attrs, defStyleAttr) {
 
     private val paint: Paint = Paint(Paint.ANTI_ALIAS_FLAG)
-
 
     private var colorBackgroundGoogle = Color.parseColor(DEFAULT_COLOR_BACKGROUND_GOOGLE)
     private var colorBlueGoogle = Color.parseColor(DEFAULT_COLOR_BLUE_GOOGLE)
@@ -64,7 +62,6 @@ class GoogleButtonView @JvmOverloads constructor(
     private var marginGoogleY = DEFAULT_MARGIN_Y_GOOGLE
     private var rotationG = DEFAULT_TURN_G
 
-
     private var startLaterX = 0F
     private var startLaterY = 0F
     private var longBetweenLater = 0F
@@ -83,8 +80,6 @@ class GoogleButtonView @JvmOverloads constructor(
     private var startLaterYPlusInnerRadius = 0F
     private var innerRadiusLaterG = 0F
     private var outerRadiusLaterG = 0F
-    private var durationAnimationGoogle = 0L
-    private var moveLongBetweenLater = 0
 
 
     init {
