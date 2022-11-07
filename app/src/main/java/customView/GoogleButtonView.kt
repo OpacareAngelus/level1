@@ -260,8 +260,8 @@ class GoogleButtonView @JvmOverloads constructor(
         }
         paint.color = colorBlueGoogle
         canvas.drawRect(
-            startLaterX, startLaterYMinusHalfRadius,
-            startLaterXPlusOuterRadius, startLaterYPlusHalfRadius,
+            startLaterX, startLaterYMinusHalfRadius-1,
+            startLaterXPlusOuterRadius-1, startLaterYPlusHalfRadius,
             paint
         )
     }
